@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Hashing and Emailing</title>
+   
+    <style>
+        body {
+            background-color: #f9f9f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            color: #011113;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1, h2 {
+            font-weight: bold;
+            color: #021120;
+            text-align: center;
+        }
+
+        p {
+            font-size: 22px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .left-section {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+            float: left; /* Added float left */
+        }
+
+        .right-section {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            float: right; /* Added float right */
+        }
+
+        .right-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 100px;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .hash-section {
+            clear: both; /* Clear floats */
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input[type="file"], input[type="email"], button {
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+
+        input[type="file"], input[type="email"] {
+            width: calc(100% - 40px);
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #0056b3;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color:darkblue ;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>File Hashing and Emailing</h1>
+        </header>
+        <main>
+            <p class="quote">"Hashing is like a fingerprint for data, ensuring its integrity and authenticity." - Anonymous</p>
+            <section class="left-section">
+                <h2>Hashing</h2>
+                
+                <p>Hashing is the process of transforming input data (or 'message') into a fixed-size string of bytes, typically for security purposes.</p>
+                <p>Hash functions are commonly used in computer science and cryptography for various purposes:</p>
+                <ul>
+                    <li><strong>Data Integrity Verification:</strong> Hashing is used to verify the integrity of data by comparing hash values before and after transmission or storage.</li>
+                    <li><strong>Password Storage:</strong> Hash functions are used to securely store passwords by hashing them before storing in databases.</li>
+                    <li><strong>Digital Signatures:</strong> Hashing is a crucial component of digital signatures, ensuring data authenticity and integrity.</li>
+                </ul>
+                
+            </section>
+            
+            <section class="right-section">
+                <img src="HASHING.png" alt="Hashing Image 1">
+            </section>
+            
+        </main>
+        <p>Overall, hashing plays a vital role in ensuring data security, integrity, and authenticity in various applications.</p>
+        <section class="hash-section">
+            <h2>Hash the Code</h2>
+            <p>Upload a file and generate its hash code.</p>
+            <div class="form-group">
+                <input type="file" id="fileInput" accept=".txt">
+                <input type="email" id="emailInput" placeholder="Recipient Email">
+                <button onclick="hashAndSend()">Hash File & Send Email</button>
+            </div>
+            <div id="hashResult" style="display: none;">
+                <label for="hashOutput">Hash Code:</label>
+                <textarea id="hash output" rows="4" readonly></textarea>
+            </div>
+        </section>
+    </div>
+
+    <footer>We preserve your Authenticity.</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
